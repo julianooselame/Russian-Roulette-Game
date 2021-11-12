@@ -31,8 +31,10 @@ public class Main {
             }
 
         } while (op != 4);
-    }//main
+    }
+
     private static int menu() {
+
         StringBuilder menu = new StringBuilder();
         menu.append("1 - Cadastrar Duelistas" + "\n");
         menu.append("2 - Listar Duelistas" + "\n");
@@ -43,6 +45,7 @@ public class Main {
     }
 
     private static void cadastrarDuelistas(ArrayList<Duelist> duelists) {
+
         Duelist duelist = new Duelist();
         duelist.setName(JOptionPane.showInputDialog("Digite um nome para o Duelista"));
         duelists.add(duelist);
@@ -50,6 +53,7 @@ public class Main {
     }
 
     private static String listarDuelistas() {
+
         StringBuilder sb = new StringBuilder();
         sb.append("====== LISTA DE DUELISTAS CADASTRADOS ======\n");
 
@@ -64,6 +68,7 @@ public class Main {
     }
 
     private static ArrayList<Duelist> escolherDuelistas() {
+
         Duelist duelist1;
         Duelist duelist2;
 
@@ -76,6 +81,7 @@ public class Main {
         ArrayList<Duelist> players = new ArrayList<Duelist>();
 
         while (vivo1) {
+
             JOptionPane.showMessageDialog(null, "Escolha o primeiro Duelista!");
             option1 = Integer.parseInt(JOptionPane.showInputDialog(listarDuelistas())) - 1;
 
@@ -90,6 +96,7 @@ public class Main {
         }
 
         while (vivo2) {
+
             JOptionPane.showMessageDialog(null, "Escolha o segundo Duelista!");
             option2 = Integer.parseInt(JOptionPane.showInputDialog(listarDuelistas())) - 1;
 
@@ -109,6 +116,7 @@ public class Main {
     }
 
     private static void duelar() {
+
         ArrayList<Duelist> players =  escolherDuelistas();
 
         String shoot = "Empty";
@@ -149,6 +157,7 @@ public class Main {
     }
 
     public static String shot() {
+
         ArrayList<String> gun = new ArrayList<>();
         gun.add("Empty");
         gun.add("Empty");
